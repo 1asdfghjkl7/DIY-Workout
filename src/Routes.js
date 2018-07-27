@@ -4,6 +4,8 @@ import Home from "./Components/Home/Home";
 import Callback from "./Components/Callback/Callback";
 import Auth from "./Components/Auth/Auth";
 import Dashboard from "./Components/Dashboard/Dashboard";
+import Programs from "./Components/Dashboard/Programs/Programs";
+import Tutorials from "./Components/Dashboard/Tutorials/Tutorials";
 
 const auth = new Auth();
 
@@ -31,6 +33,16 @@ const Routes = () => (
                 handleAuthentication(props);
                 return <Callback {...props} />;
             }}
+        />
+        <Route
+            exact
+            path="/Dashboard/Programs"
+            render={props => <Programs {...props} />}
+        />
+        <Route
+            exact
+            path="/Dashboard/Tutorials"
+            render={props => <Tutorials {...props} />}
         />
     </div>
 );
