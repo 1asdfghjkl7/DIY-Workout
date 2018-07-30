@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Programs.css";
 
 export default class Programs extends Component {
@@ -6,8 +7,12 @@ export default class Programs extends Component {
         return (
             <React.Fragment>
                 <div id="Buttons">
-                    <button>New</button>
-                    <button>Saved</button>
+                    <Link to="/Dashboard/Programs/NewProgram">
+                        <button>New</button>
+                    </Link>
+                    <Link to="/Dashboard/Programs/SavedPrograms">
+                        <button>Saved</button>
+                    </Link>
                 </div>
             </React.Fragment>
         );

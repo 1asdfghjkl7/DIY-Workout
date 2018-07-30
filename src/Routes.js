@@ -6,6 +6,9 @@ import Auth from "./Components/Auth/Auth";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Programs from "./Components/Dashboard/Programs/Programs";
 import Tutorials from "./Components/Dashboard/Tutorials/Tutorials";
+import NewProgram from "./Components/Dashboard/Programs/NewProgram";
+import SavedPrograms from "./Components/Dashboard/Programs/SavedPrograms";
+import SavedProgram from "./Components/Dashboard/Programs/SavedProgram";
 
 const auth = new Auth();
 
@@ -41,8 +44,30 @@ const Routes = () => (
         />
         <Route
             exact
+            path="/Dashboard/Programs/NewProgram"
+            render={props => <NewProgram {...props} />}
+        />
+        <Route
+            exact
             path="/Dashboard/Tutorials"
             render={props => <Tutorials {...props} />}
+        />
+        <Route
+            exact
+            path="/Dashboard/Programs/SavedPrograms/"
+            render={props => <SavedPrograms {...props} />}
+        />
+        <Route
+            exact
+            path="/Dashboard/Programs/SavedPrograms/:programId"
+            render={props => {
+                return (
+                    <SavedProgram
+                        {...props}
+                        program={props.location.state.program}
+                    />
+                );
+            }}
         />
     </div>
 );

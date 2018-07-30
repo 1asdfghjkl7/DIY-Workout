@@ -1,0 +1,126 @@
+{
+    "exercises": [
+        {
+            "name": "exampleExercise",
+            "id": 1,
+            "primaryMuscles": 1,
+            "typeofExercise": 1
+        }
+    ],
+    "muscleGroups": [
+        {
+            "id": 1,
+            "name": "chest"
+        },
+        {
+            "id": 2,
+            "name": "quads"
+        },
+        {
+            "id": 3,
+            "name": "hamstrings"
+        },
+        {
+            "id": 4,
+            "name": "triceps"
+        },
+        {
+            "id": 5,
+            "name": "biceps"
+        },
+        {
+            "id": 6,
+            "name": "back"
+        },
+        {
+            "id": 7,
+            "name": "shoulders"
+        },
+        {
+            "id": 8,
+            "name": "abs"
+        }
+    ],
+    "typeOfExercise": [
+        {
+            "id": 1,
+            "name": "strength",
+            "repRange": [4, 5, 6]
+        },
+        {
+            "id": 2,
+            "name": "hypertrophy",
+            "repRange": [8, 9, 10, 11, 12]
+        },
+        {
+            "id": 3,
+            "name": "power",
+            "repRange": [2, 3, 4]
+        },
+        {
+            "id": 4,
+            "name": "recovery/endurance",
+            "repRange": [12, 13, 14, 15, 16, 17, 18, 19, 20]
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "Pablo"
+        }
+    ],
+    "workouts": [
+        {
+            "name": "exampleWorkout1",
+            "id": 1,
+            "exerciseId": [1, 2, 3],
+            "modifiedExercises": {
+                "name": "exampleExercise",
+                "id": 1,
+                "reps": 5
+            },
+            "daysId": [2, 4, 6]
+        }
+    ],
+    "days": [
+        {
+            "id": 1,
+            "name": "Sunday"
+        },
+        {
+            "id": 2,
+            "name": "Monday"
+        },
+        {
+            "id": 3,
+            "name": "Tuesday"
+        },
+        {
+            "id": 4,
+            "name": "Wednesday"
+        },
+        {
+            "id": 5,
+            "name": "Thursday"
+        },
+        {
+            "id": 6,
+            "name": "Friday"
+        },
+        {
+            "id": 7,
+            "name": "Saturday"
+        }
+    ],
+    "programs": [
+        {
+            "name": "exampleProgram",
+            "workoutId": [1],
+            "id": 1
+        },
+        {
+            "name": "test2",
+            "id": 2
+        }
+    ]
+}
