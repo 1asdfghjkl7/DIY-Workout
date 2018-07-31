@@ -15,7 +15,7 @@ class APIManager {
         return fetch("http://localhost:5002/programs/").then(e => e.json());
     }
 
-    POSTWorkout(name, days) {
+    POSTWorkout(name, days, programId) {
         return fetch("http://localhost:5002/workouts/", {
             method: "POST",
             headers: {
@@ -23,9 +23,14 @@ class APIManager {
             },
             body: JSON.stringify({
                 name: name,
-                daysId: days
+                daysId: days,
+                programId: programId
             })
         }).then(e => e.json());
+    }
+
+    GETWorkout() {
+        return fetch("http://localhost:5002/workouts/").then(e => e.json());
     }
 }
 
