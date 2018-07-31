@@ -79,7 +79,12 @@
                 "id": 1,
                 "reps": 5
             },
-            "daysId": [2, 4, 6]
+            "daysId": ["2", "4", "6"]
+        },
+        {
+            "name": "testworkout",
+            "daysId": ["1", "3", "5"],
+            "id": 2
         }
     ],
     "days": [
