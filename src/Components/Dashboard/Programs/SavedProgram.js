@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import API from "../../APIManager/APIManager";
 import "./SavedProgram.css";
 import WorkoutForm from "./WorkoutForm";
-import Workout from "./Workout";
+import WorkoutTitle from "./WorkoutTitle";
 
 export default class SavedProgram extends Component {
     state = {
@@ -12,6 +12,7 @@ export default class SavedProgram extends Component {
         workouts: [],
         idOfProgram: this.props.location.pathname.slice(34)
     };
+
     handleOpen = () => this.setState({ modalOpen: true });
     handleClose = () => this.setState({ modalOpen: false });
     arrayStuff = event => {
@@ -44,8 +45,7 @@ export default class SavedProgram extends Component {
     }
     render() {
         const location = this.props.location;
-        let url = location.pathname;
-        console.log(location.pathname);
+        const url = location.pathname;
         const program = this.props.program;
 
         if (url === `/Dashboard/Programs/SavedPrograms/${program.id}`) {
@@ -63,32 +63,15 @@ export default class SavedProgram extends Component {
                         <h1>{program.name}</h1>
                     </Link>
                     {this.state.workouts.map(workout => (
-                        <Link
+                        <WorkoutTitle
                             key={workout.id}
-                            to={{
-                                pathname: `${url}/${workout.id}`,
-                                state: {
-                                    program: this.props.program,
-                                    workout: workout
-                                }
-                            }}
-                        >
-                            <Workout
-                                key={workout.id}
-                                workout={workout}
-                                idOfProgram={this.state.idOfProgram}
-                                url={url}
-                                program={program}
-                            />
-                        </Link>
+                            workout={workout}
+                            idOfProgram={this.state.idOfProgram}
+                            url={url}
+                            program={program}
+                        />
                     ))}
-                    {/* <Link
-                        to={{
-                            pathname: `${url}/${pulledWorkouts.id}`
-                        }}
-                    >
-                        <div />
-                    </Link> */}
+
                     <WorkoutForm
                         days={this.state.days}
                         arrayStuff={this.arrayStuff}

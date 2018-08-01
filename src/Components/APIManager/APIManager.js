@@ -25,7 +25,8 @@ class APIManager {
             body: JSON.stringify({
                 name: name,
                 daysId: days,
-                programId: programId
+                programId: programId,
+                modifiedExercises: []
             })
         }).then(e => e.json());
     }
