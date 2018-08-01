@@ -6,7 +6,8 @@ class APIManager {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name: name
+                name: name,
+                workoutId: []
             })
         }).then(e => e.json());
     }

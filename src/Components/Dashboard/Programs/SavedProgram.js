@@ -66,7 +66,11 @@ export default class SavedProgram extends Component {
                         <Link
                             key={workout.id}
                             to={{
-                                pathname: `${url}/${workout.id}`
+                                pathname: `${url}/${workout.id}`,
+                                state: {
+                                    program: this.props.program,
+                                    workout: workout
+                                }
                             }}
                         >
                             <Workout
