@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Workout from "./Workout";
+import ExerciseForm from "./ExerciseForm";
 
 export default class WorkoutTitle extends Component {
     state = {
-        isDetails: false
+        isDetails: false,
+        exerciseModalOpen: false
     };
 
     handleDetails = () => {
@@ -11,6 +13,9 @@ export default class WorkoutTitle extends Component {
             isDetails: !prevState.isDetails
         }));
     };
+
+    handleExerciseOpen = () => this.setState({ exerciseModalOpen: true });
+    handleExerciseClose = () => this.setState({ exerciseModalOpen: false });
 
     render() {
         const workoutId = this.props.program.workoutId;
@@ -35,6 +40,13 @@ export default class WorkoutTitle extends Component {
                             />
                         ) : null}
                     </div>
+                    {this.state.isDetails ? (
+                        <ExerciseForm
+                            handleExerciseOpen={this.handleExerciseOpen}
+                            handleExerciseClose={this.handleExerciseClose}
+                            exerciseModalOpen={this.state.exerciseModalOpen}
+                        />
+                    ) : null}
                 </React.Fragment>
             );
         } else {

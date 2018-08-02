@@ -3,170 +3,170 @@
         {
             "id": 1,
             "name": "Bench Press",
-            "primaryMuscles": 1,
-            "type": 1
+            "muscleGroupId": 1,
+            "typeOfExerciseId": 1
         },
         {
             "id": 2,
             "name": "Squat",
-            "primaryMuscles": 2,
-            "type": 1
+            "muscleGroupId": 2,
+            "typeOfExerciseId": 1
         },
         {
             "id": 3,
             "name": "Deadlift",
-            "primaryMuscles": 3,
-            "type": 1
+            "muscleGroupId": 3,
+            "typeOfExerciseId": 1
         },
         {
             "id": 4,
             "name": "Overhead Press",
-            "primaryMuscles": 7,
-            "type": 1
+            "muscleGroupId": 7,
+            "typeOfExerciseId": 1
         },
         {
             "id": 5,
             "name": "Stiff Leg Deadlift",
-            "primaryMuscles": 3,
-            "type": 2
+            "muscleGroupId": 3,
+            "typeOfExerciseId": 2
         },
         {
             "id": 6,
             "name": "Glute Ham Raise",
-            "primaryMuscles": 3,
-            "type": 4
+            "muscleGroupId": 3,
+            "typeOfExerciseId": 4
         },
         {
             "id": 7,
             "name": "Leg Extension",
-            "primaryMuscles": 2,
-            "type": 4
+            "muscleGroupId": 2,
+            "typeOfExerciseId": 4
         },
         {
             "id": 8,
             "name": "Pause Squat",
-            "primaryMuscles": 2,
-            "type": 3
+            "muscleGroupId": 2,
+            "typeOfExerciseId": 3
         },
         {
             "id": 9,
             "name": "Pin Squat",
-            "primaryMuscles": 2,
-            "type": 3
+            "muscleGroupId": 2,
+            "typeOfExerciseId": 3
         },
         {
             "id": 10,
             "name": "Barbell Row",
-            "primaryMuscles": 6,
-            "type": 2
+            "muscleGroupId": 6,
+            "typeOfExerciseId": 2
         },
         {
             "id": 11,
             "name": "T-Bar Row",
-            "primaryMuscles": 6,
-            "type": 2
+            "muscleGroupId": 6,
+            "typeOfExerciseId": 2
         },
         {
             "id": 12,
             "name": "Dumbbell Bench",
-            "primaryMuscles": 1,
-            "type": 2
+            "muscleGroupId": 1,
+            "typeOfExerciseId": 2
         },
         {
             "id": 13,
             "name": "Tricep Extension",
-            "primaryMuscles": 4,
-            "type": 4
+            "muscleGroupId": 4,
+            "typeOfExerciseId": 4
         },
         {
             "id": 14,
             "name": "Face Pull",
-            "primaryMuscles": 7,
-            "type": 4
+            "muscleGroupId": 7,
+            "typeOfExerciseId": 4
         },
         {
             "id": 15,
             "name": "Rack Pull",
-            "primaryMuscles": 6,
-            "type": 2
+            "muscleGroupId": 6,
+            "typeOfExerciseId": 2
         },
         {
             "id": 16,
             "name": "Front Squat",
-            "primaryMuscles": 2,
-            "type": 1
+            "muscleGroupId": 2,
+            "typeOfExerciseId": 1
         },
         {
             "id": 17,
             "name": "Back Extension",
-            "primaryMuscles": 6,
-            "type": 4
+            "muscleGroupId": 6,
+            "typeOfExerciseId": 4
         },
         {
             "id": 18,
             "name": "Trap Bar Deadlift",
-            "primaryMuscles": 2,
-            "type": 2
+            "muscleGroupId": 2,
+            "typeOfExerciseId": 2
         },
         {
             "id": 19,
             "name": "Push Press",
-            "primaryMuscles": 7,
-            "type": 3
+            "muscleGroupId": 7,
+            "typeOfExerciseId": 3
         },
         {
             "id": 20,
             "name": "Speed Squat",
-            "primaryMuscles": 2,
-            "type": 3
+            "muscleGroupId": 2,
+            "typeOfExerciseId": 3
         },
         {
             "id": 21,
             "name": "Speed Deadlift",
-            "primaryMuscles": 3,
-            "type": 3
+            "muscleGroupId": 3,
+            "typeOfExerciseId": 3
         },
         {
             "id": 22,
             "name": "Paused Bench",
-            "primaryMuscles": 1,
-            "type": 3
+            "muscleGroupId": 1,
+            "typeOfExerciseId": 3
         },
         {
             "id": 23,
             "name": "Cable Row",
-            "primaryMuscles": 6,
-            "type": 4
+            "muscleGroupId": 6,
+            "typeOfExerciseId": 4
         },
         {
             "id": 24,
             "name": "Incline Bench Press",
-            "primaryMuscles": 1,
-            "type": 2
+            "muscleGroupId": 1,
+            "typeOfExerciseId": 2
         },
         {
             "id": 25,
             "name": "Behind Neck Press",
-            "primaryMuscles": 7,
-            "type": 2
+            "muscleGroupId": 7,
+            "typeOfExerciseId": 2
         },
         {
             "id": 26,
             "name": "Behind Neck Pulldown",
-            "primaryMuscles": 6,
-            "type": 2
+            "muscleGroupId": 6,
+            "typeOfExerciseId": 2
         },
         {
             "id": 27,
             "name": "SlingShot Bench",
-            "primaryMuscles": 1,
-            "type": 3
+            "muscleGroupId": 1,
+            "typeOfExerciseId": 3
         },
         {
             "id": 28,
             "name": "Deficit Deadlift",
-            "primaryMuscles": 3,
-            "type": 2
+            "muscleGroupId": 3,
+            "typeOfExerciseId": 2
         }
     ],
     "muscleGroups": [
@@ -203,7 +203,7 @@
             "name": "abs"
         }
     ],
-    "typeOfExercise": [
+    "typeOfExercises": [
         {
             "id": 1,
             "name": "strength",
@@ -252,6 +252,13 @@
             "programId": "1",
             "id": 4,
             "modifiedExercises": []
+        },
+        {
+            "name": "jenbnbs workout",
+            "daysId": ["2", "4", "6"],
+            "programId": "1",
+            "modifiedExercises": [],
+            "id": 5
         }
     ],
     "days": [

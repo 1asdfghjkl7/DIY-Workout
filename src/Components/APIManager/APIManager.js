@@ -34,6 +34,22 @@ class APIManager {
     GETWorkout() {
         return fetch("http://localhost:5002/workouts/").then(e => e.json());
     }
+
+    GETExercises() {
+        return fetch("http://localhost:5002/exercises/").then(e => e.json());
+    }
+
+    GETTypeOfExercise() {
+        return fetch("http://localhost:5002/typeOfExercise/").then(e =>
+            e.json()
+        );
+    }
+
+    ForExerciseForm() {
+        return fetch(
+            "http://localhost:5002/exercises?_expand=typeOfExercise"
+        ).then(e => e.json());
+    }
 }
 
 const API = new APIManager();
