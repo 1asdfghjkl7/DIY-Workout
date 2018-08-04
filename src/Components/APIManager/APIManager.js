@@ -50,6 +50,21 @@ class APIManager {
             "http://localhost:5002/exercises?_expand=typeOfExercise"
         ).then(e => e.json());
     }
+
+    //useExerciseWorkoutCross not ModifiedExercise. nested json doesnt work.
+    POSTModifiedExercise(exId, wrkId, rep) {
+        return fetch("http://localhost:5002/exerciseWorkoutCross", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                exId: exId,
+                wrkId: wrkId,
+                rep: rep
+            })
+        }).then(e => e.json());
+    }
 }
 
 const API = new APIManager();

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Button, Checkbox, Form, Modal } from "semantic-ui-react";
+import { Button, Modal } from "semantic-ui-react";
 import API from "../../APIManager/APIManager";
+import ExerciseInsideForm from "./ExerciseInsideForm";
 
 //pull type down from db match to each exercise and create checkboxes with labels for each reprange
 // if exercise is selected pop up another modal that has exercise.name as modal header and has checkboxes
@@ -10,7 +11,7 @@ export default class ExerciseForm extends Component {
     state = {
         exercises: [],
         exerciseInsideModalOpen: false,
-        typeOfExercise: []
+        currentRadio: ""
     };
 
     componentDidMount() {
@@ -18,6 +19,12 @@ export default class ExerciseForm extends Component {
             this.setState({ exercises: response });
         });
     }
+
+    handleRadioChange = event => {
+        this.setState({
+            currentRadio: event.target.value
+        });
+    };
 
     postModifiedExercise = () => {};
 
@@ -27,31 +34,6 @@ export default class ExerciseForm extends Component {
         this.setState({ exerciseInsideModalOpen: false });
 
     render() {
-        const InsideModal = () =>
-            this.state.exercises.map(exercise => (
-                <Modal
-                    open={this.state.exerciseInsideModalOpen}
-                    onOpen={this.handleExerciseInsideOpen}
-                    onClose={this.handleExerciseInsideClose}
-                    trigger={<h3>{exercise.name}</h3>}
-                >
-                    <Modal.Header>Idk yet</Modal.Header>
-                    <Modal.Content>
-                        <Form.Field>
-                            <Checkbox
-                                // id={1}
-                                label="grab rep number"
-                                // onChange={this.props.arrayStuff}
-                            />
-                        </Form.Field>
-                    </Modal.Content>
-                    <Modal.Actions>
-                        <Button onClick={this.handleExerciseInsideClose}>
-                            Save Exercise
-                        </Button>
-                    </Modal.Actions>
-                </Modal>
-            ));
         return (
             <React.Fragment>
                 <Modal
@@ -66,15 +48,28 @@ export default class ExerciseForm extends Component {
                     <Modal.Header>Exercise Form</Modal.Header>
                     <Modal.Content>
                         <Modal.Description>
-                            <Form>
-                                <InsideModal />
+                            {/* <InsideModal /> */}
 
-                                <Button
-                                    onClick={this.props.handleExerciseClose}
-                                >
-                                    Close
-                                </Button>
-                            </Form>
+                            <ExerciseInsideForm
+                                exercises={this.state.exercises}
+                                exerciseInsideModalOpen={
+                                    this.state.exerciseInsideModalOpen
+                                }
+                                handleExerciseInsideOpen={
+                                    this.handleExerciseInsideOpen
+                                }
+                                handleExerciseInsideClose={
+                                    this.handleExerciseInsideClose
+                                }
+                                handleRadioChange={this.handleRadioChange}
+                                currentRadio={this.state.currentRadio}
+                                workoutId={this.props.workoutId}
+                            />
+
+                            <Button onClick={this.props.handleExerciseClose}>
+                                Close
+                            </Button>
+                            {/* </Form> */}
                         </Modal.Description>
                     </Modal.Content>
                 </Modal>

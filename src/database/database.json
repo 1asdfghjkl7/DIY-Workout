@@ -307,5 +307,22 @@
             "workoutId": [],
             "id": 4
         }
+    ],
+    "exerciseWorkoutCross": [
+        {
+            "exerciseId": 1,
+            "workoutId": 1,
+            "reps": "3"
+        },
+        {
+            "exerciseId": 2,
+            "workoutId": 1,
+            "reps": "5"
+        },
+        {
+            "exerciseId": 3,
+            "workoutId": 1,
+            "reps": "8"
+        }
     ]
 }

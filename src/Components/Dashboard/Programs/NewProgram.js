@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../APIManager/APIManager";
-
+import { Button, Input, Label } from "semantic-ui-react";
 export default class NewProgram extends Component {
     render() {
         return (
@@ -10,9 +10,16 @@ export default class NewProgram extends Component {
                         API.POSTProgram(document.getElementById("name").value);
                     }}
                 >
-                    <label htmlFor="name">Name of Program</label>
-                    <input id="name" name="name" type="text" />
-                    <button>Save</button>
+                    <Label
+                        pointing="right"
+                        color="blue"
+                        size="massive"
+                        htmlFor="name"
+                    >
+                        Name of Program
+                    </Label>
+                    <Input size="massive" id="name" name="name" type="text" />
+                    <Button size="massive">Save</Button>
                 </form>
             </React.Fragment>
         );

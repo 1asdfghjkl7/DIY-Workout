@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Workout from "./Workout";
 import ExerciseForm from "./ExerciseForm";
+import API from "../../APIManager/APIManager";
 
 export default class WorkoutTitle extends Component {
     state = {
@@ -45,6 +46,7 @@ export default class WorkoutTitle extends Component {
                             handleExerciseOpen={this.handleExerciseOpen}
                             handleExerciseClose={this.handleExerciseClose}
                             exerciseModalOpen={this.state.exerciseModalOpen}
+                            workoutId={this.props.workout.id}
                         />
                     ) : null}
                 </React.Fragment>

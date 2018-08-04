@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import API from "../../APIManager/APIManager";
 
 export default class Workout extends Component {
     render() {

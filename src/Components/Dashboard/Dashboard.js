@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "semantic-ui-react";
 import "./Dashboard.css";
 
 export default class Dashboard extends Component {
@@ -8,10 +9,10 @@ export default class Dashboard extends Component {
             <React.Fragment>
                 <div id="Buttons">
                     <Link to="/Dashboard/Programs">
-                        <button>Programs</button>
+                        <Button size="massive">Programs</Button>
                     </Link>
                     <Link to="/Dashboard/Tutorials">
-                        <button>Tutorials</button>
+                        <Button size="massive">Tutorials</Button>
                     </Link>
                 </div>
             </React.Fragment>
