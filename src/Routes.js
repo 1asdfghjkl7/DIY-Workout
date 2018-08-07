@@ -9,6 +9,7 @@ import Tutorials from "./Components/Dashboard/Tutorials/Tutorials";
 import NewProgram from "./Components/Dashboard/Programs/NewProgram";
 import SavedPrograms from "./Components/Dashboard/Programs/SavedPrograms";
 import SavedProgram from "./Components/Dashboard/Programs/SavedProgram";
+import ExerciseFormPageHolder from "./Components/Dashboard/Programs/ExerciseFormPageHolder";
 
 const auth = new Auth();
 
@@ -65,8 +66,16 @@ const Routes = () => (
                     <SavedProgram
                         {...props}
                         program={props.location.state.program}
+                        toggle={props.location.state.toggle}
                     />
                 );
+            }}
+        />
+        <Route
+            exact
+            path="/AddExercise"
+            render={props => {
+                return <ExerciseFormPageHolder {...props} />;
             }}
         />
     </div>

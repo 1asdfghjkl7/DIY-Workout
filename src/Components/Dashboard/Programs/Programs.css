@@ -1,12 +1,12 @@
 #Buttons {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
-#Buttons > button {
+/* #Buttons > button {
     padding: 3rem;
-}
-
+} */
+/* 
 button:first-of-type {
     margin-top: 3rem;
     margin-right: 2rem;
@@ -15,4 +15,4 @@ button:first-of-type {
 button:last-of-type {
     margin-left: 2rem;
     margin-top: 3rem;
-}
+} */
