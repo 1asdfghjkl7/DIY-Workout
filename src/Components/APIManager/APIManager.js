@@ -76,6 +76,44 @@ class APIManager {
             }
         });
     }
+
+    DELETEExercise(id) {
+        return fetch(`http://localhost:5002/exerciseWorkoutCross/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+    }
+
+    DELETEWorkout(id) {
+        return fetch(`http://localhost:5002/workouts/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+    }
+
+    PATCHProgramName(id, value) {
+        return fetch(`http://localhost:5002/programs/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ name: value })
+        });
+    }
+
+    PATCHWorkoutName(id, value) {
+        return fetch(`http://localhost:5002/workouts/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ name: value })
+        });
+    }
 }
 
 const API = new APIManager();

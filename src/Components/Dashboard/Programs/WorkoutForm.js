@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Checkbox, Form, Modal } from "semantic-ui-react";
+import { Button, Form, Modal } from "semantic-ui-react";
 
 export default class WorkoutForm extends Component {
     render() {

@@ -4,13 +4,15 @@ import API from "../../APIManager/APIManager";
 import "./SavedProgram.css";
 import WorkoutForm from "./WorkoutForm";
 import WorkoutTitle from "./WorkoutTitle";
-import { Button } from "semantic-ui-react";
+import { Button, Input } from "semantic-ui-react";
 
 export default class SavedProgram extends Component {
     state = {
         modalOpen: false,
         workouts: [],
-        idOfProgram: this.props.location.pathname.slice(34)
+        idOfProgram: this.props.location.pathname.slice(34),
+        input: this.props.program.name,
+        toggle: true
     };
 
     handleOpen = () => this.setState({ modalOpen: true });
@@ -42,6 +44,29 @@ export default class SavedProgram extends Component {
             });
         });
     }
+
+    handleInput = event => {
+        this.setState({ input: event.target.value });
+    };
+
+    saveProgramName = () => {
+        API.PATCHProgramName(this.props.program.id, this.state.input).then(
+            this.changeToggle
+        );
+    };
+
+    changeToggle = () => {
+        this.setState(prevState => ({
+            toggle: !prevState.toggle
+        }));
+        console.log(this.state.toggle);
+    };
+
+    deleteProgram = () => {
+        API.DELETEProgram(this.props.program.id);
+        window.location.reload();
+    };
+
     render() {
         const location = this.props.location;
         const url = location.pathname;
@@ -50,17 +75,34 @@ export default class SavedProgram extends Component {
         if (url === `/Dashboard/Programs/SavedPrograms/${program.id}`) {
             return (
                 <React.Fragment>
-                    <Link
-                        key={program.id}
-                        to={{
-                            pathname: `/Dashboard/Programs/SavedPrograms/${
-                                program.id
-                            }`,
-                            state: { program: program }
-                        }}
-                    >
-                        <h1>{program.name}</h1>
-                    </Link>
+                    {this.state.toggle ? (
+                        <div>
+                            <h1>{this.state.input}</h1>
+                            <Button onClick={this.changeToggle} color="yellow">
+                                Edit
+                            </Button>
+                        </div>
+                    ) : (
+                        <div>
+                            <Input
+                                value={this.state.input}
+                                onChange={this.handleInput}
+                            />
+                            <Button
+                                onClick={this.changeToggle}
+                                color="instagram"
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                onClick={this.saveProgramName}
+                                color="green"
+                            >
+                                Save
+                            </Button>
+                        </div>
+                    )}
+
                     {this.state.workouts.map(workout => (
                         <WorkoutTitle
                             key={workout.id}
@@ -93,15 +135,12 @@ export default class SavedProgram extends Component {
                         }}
                     >
                         <div>
-                            <h1 key={program.id}>{program.name}</h1>
+                            <h1 id={program.id} key={program.id}>
+                                {program.name}
+                            </h1>
                         </div>
                     </Link>
-                    <Button
-                        color="red"
-                        onClick={() => {
-                            API.DELETEProgram(program.id);
-                        }}
-                    >
+                    <Button color="red" onClick={this.deleteProgram}>
                         Delete
                     </Button>
                 </div>

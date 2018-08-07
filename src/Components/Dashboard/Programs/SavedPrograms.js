@@ -24,7 +24,6 @@ export default class SavedPrograms extends Component {
                         key={program.id}
                         program={program}
                         location={this.props.location}
-                        days={this.state.days}
                     />
                 ))}
             </React.Fragment>

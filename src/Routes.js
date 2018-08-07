@@ -66,6 +66,7 @@ const Routes = () => (
                     <SavedProgram
                         {...props}
                         program={props.location.state.program}
+                        toggle={props.location.state.toggle}
                     />
                 );
             }}

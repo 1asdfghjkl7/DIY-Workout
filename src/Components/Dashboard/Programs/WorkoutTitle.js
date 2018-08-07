@@ -1,21 +1,44 @@
 import React, { Component } from "react";
 import Workout from "./Workout";
 import { Link } from "react-router-dom";
-import ExerciseForm from "./ExerciseForm";
 import API from "../../APIManager/APIManager";
-import ExerciseFormPage from "./ExerciseFormPage";
-import { Button } from "semantic-ui-react";
+import { Button, Input } from "semantic-ui-react";
 
 export default class WorkoutTitle extends Component {
     state = {
         isDetails: false,
-        exerciseModalOpen: false
+        exerciseModalOpen: false,
+        input: this.props.workout.name,
+        toggle: true
+    };
+
+    handleInput = event => {
+        this.setState({ input: event.target.value });
+    };
+
+    changeToggle = () => {
+        this.setState(prevState => ({
+            toggle: !prevState.toggle
+        }));
+        console.log(this.state.toggle);
+    };
+
+    saveWorkoutName = () => {
+        API.PATCHWorkoutName(this.props.workout.id, this.state.input).then(
+            this.changeToggle
+        );
     };
 
     handleDetails = () => {
         this.setState(prevState => ({
             isDetails: !prevState.isDetails
         }));
+    };
+
+    deleteWorkout = () => {
+        API.DELETEWorkout(this.props.workout.id);
+        // console.log(this.props.workout.id);
+        window.location.reload();
     };
 
     handleExerciseOpen = () => this.setState({ exerciseModalOpen: true });
@@ -32,9 +55,41 @@ export default class WorkoutTitle extends Component {
             return (
                 <React.Fragment>
                     <div>
-                        <h3 onClick={this.handleDetails}>
-                            {this.props.workout.name}
-                        </h3>
+                        {this.state.toggle ? (
+                            <div>
+                                <h3 onClick={this.handleDetails}>
+                                    {this.state.input}
+                                </h3>
+                                <Button
+                                    onClick={this.changeToggle}
+                                    color="yellow"
+                                >
+                                    Edit
+                                </Button>
+                                <Button
+                                    onClick={this.deleteWorkout}
+                                    color="red"
+                                >
+                                    Delete
+                                </Button>
+                            </div>
+                        ) : (
+                            <div>
+                                <Input
+                                    value={this.state.input}
+                                    onChange={this.handleInput}
+                                />
+                                <Button onClick={this.changeToggle}>
+                                    Cancel
+                                </Button>
+                                <Button
+                                    onClick={this.saveWorkoutName}
+                                    color="green"
+                                >
+                                    Save
+                                </Button>
+                            </div>
+                        )}
                         {this.state.isDetails ? (
                             <Workout workout={this.props.workout} />
                         ) : null}
