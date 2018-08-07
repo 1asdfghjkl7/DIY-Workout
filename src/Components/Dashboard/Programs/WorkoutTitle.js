@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import Workout from "./Workout";
+import { Link } from "react-router-dom";
 import ExerciseForm from "./ExerciseForm";
 import API from "../../APIManager/APIManager";
+import ExerciseFormPage from "./ExerciseFormPage";
+import { Button } from "semantic-ui-react";
 
 export default class WorkoutTitle extends Component {
     state = {
@@ -19,10 +22,10 @@ export default class WorkoutTitle extends Component {
     handleExerciseClose = () => this.setState({ exerciseModalOpen: false });
 
     render() {
-        const workoutId = this.props.program.workoutId;
+        const workoutId = this.props.workout.programId;
         const idOfProgram = parseInt(this.props.idOfProgram, 8);
         if (
-            workoutId.includes(idOfProgram)
+            workoutId === idOfProgram
             // this.props.url ===
             // `/Dashboard/Programs/SavedPrograms/${this.props.program.id}`
         ) {
@@ -33,21 +36,24 @@ export default class WorkoutTitle extends Component {
                             {this.props.workout.name}
                         </h3>
                         {this.state.isDetails ? (
-                            <Workout
-                                workout={this.props.workout}
-                                idOfProgram={this.props.idOfProgram}
-                                url={this.props.url}
-                                program={this.props.program}
-                            />
+                            <Workout workout={this.props.workout} />
                         ) : null}
                     </div>
                     {this.state.isDetails ? (
-                        <ExerciseForm
-                            handleExerciseOpen={this.handleExerciseOpen}
-                            handleExerciseClose={this.handleExerciseClose}
-                            exerciseModalOpen={this.state.exerciseModalOpen}
-                            workoutId={this.props.workout.id}
-                        />
+                        // <ExerciseForm
+                        //     handleExerciseOpen={this.handleExerciseOpen}
+                        //     handleExerciseClose={this.handleExerciseClose}
+                        //     exerciseModalOpen={this.state.exerciseModalOpen}
+                        //     workoutId={this.props.workout.id}
+                        // />
+                        <Link
+                            to={{
+                                pathname: "/AddExercise/",
+                                state: this.props.workout.id
+                            }}
+                        >
+                            <Button>add exercise</Button>
+                        </Link>
                     ) : null}
                 </React.Fragment>
             );

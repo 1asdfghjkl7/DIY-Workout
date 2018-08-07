@@ -11,12 +11,17 @@ export default class ExerciseForm extends Component {
     state = {
         exercises: [],
         exerciseInsideModalOpen: false,
-        currentRadio: ""
+        currentRadio: "",
+        currentEx: "",
+        typeOfExercise: []
     };
 
     componentDidMount() {
-        API.ForExerciseForm().then(response => {
+        API.GETExercises().then(response => {
             this.setState({ exercises: response });
+        });
+        API.GETTypeOfExercise().then(response => {
+            this.setState({ typeOfExercise: response });
         });
     }
 
@@ -26,10 +31,12 @@ export default class ExerciseForm extends Component {
         });
     };
 
-    postModifiedExercise = () => {};
-
-    handleExerciseInsideOpen = () =>
-        this.setState({ exerciseInsideModalOpen: true });
+    handleExerciseInsideOpen = event => {
+        this.setState({
+            exerciseInsideModalOpen: true,
+            currentEx: event.target.id
+        });
+    };
     handleExerciseInsideClose = () =>
         this.setState({ exerciseInsideModalOpen: false });
 
@@ -64,6 +71,8 @@ export default class ExerciseForm extends Component {
                                 handleRadioChange={this.handleRadioChange}
                                 currentRadio={this.state.currentRadio}
                                 workoutId={this.props.workoutId}
+                                currentEx={this.state.currentEx}
+                                typeOfExercise={this.state.typeOfExercise}
                             />
 
                             <Button onClick={this.props.handleExerciseClose}>

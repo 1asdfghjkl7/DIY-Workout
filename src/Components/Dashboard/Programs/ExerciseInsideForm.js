@@ -1,53 +1,31 @@
 import React, { Component } from "react";
 import { Button, Modal } from "semantic-ui-react";
+import API from "../../APIManager/APIManager";
+import RepRange from "./RepRange";
+import JohnDoe from "./JohnDoe";
 
 export default class ExerciseInsideForm extends Component {
-    // saveModifiedExercise = () => {
-    //     API.POSTModifiedExercise(exercise.id);
-    // };
+    postModifiedExercise = event => {
+        // API.POSTModifiedExercise();
+        console.log(this.props.currentEx);
+        console.log(this.props.workoutId);
+        console.log(this.props.currentRadio);
+    };
 
+    //use event.target.parentNode.id or something
     render() {
         return this.props.exercises.map(exercise => (
-            <Modal
-                key={exercise.id}
-                open={this.props.exerciseInsideModalOpen}
-                onOpen={this.props.handleExerciseInsideOpen}
-                onClose={this.props.handleExerciseInsideClose}
-                trigger={<h3>{exercise.name}</h3>}
-            >
-                <Modal.Header>Idk yet</Modal.Header>
-                <Modal.Content>
-                    {exercise.typeOfExercise.repRange.map(
-                        rep => (
-                            <div key={rep}>
-                                {/* {console.log(rep)}
-                                {console.log(this.props.currentRadio)} */}
-                                {/* {console.log(this.props.workoutId)} */}
-                                {/* {console.log(exercise.id)} */}
-                                <input
-                                    type="radio"
-                                    id={rep}
-                                    value={rep}
-                                    checked={this.props.currentRadio == rep}
-                                    onChange={this.props.handleRadioChange}
-                                    // onChange={this.props.arrayStuff}
-                                />
-                                <label htmlFor={rep}>{rep}</label>
-                            </div>
-                        )
-                        // console.log(rep)
-                    )}
-                </Modal.Content>
-                <Modal.Actions>
-                    <Button
-                        onClick={() => {
-                            console.log(exercise.id);
-                        }}
-                    >
-                        Save Exercise
-                    </Button>
-                </Modal.Actions>
-            </Modal>
+            <JohnDoe
+                exercise={exercise}
+                exerciseInsideModalOpen={this.props.exerciseInsideModalOpen}
+                handleExerciseInsideOpen={this.props.handleExerciseInsideOpen}
+                handleExerciseInsideClose={this.props.handleExerciseInsideClose}
+                handleRadioChange={this.props.handleRadioChange}
+                currentRadio={this.props.currentRadio}
+                workoutId={this.props.workoutId}
+                currentEx={this.props.currentEx}
+                typeOfExercise={this.props.typeOfExercise}
+            />
         ));
     }
 }

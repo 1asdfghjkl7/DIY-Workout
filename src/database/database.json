@@ -1,328 +1,351 @@
 {
-    "exercises": [
-        {
-            "id": 1,
-            "name": "Bench Press",
-            "muscleGroupId": 1,
-            "typeOfExerciseId": 1
-        },
-        {
-            "id": 2,
-            "name": "Squat",
-            "muscleGroupId": 2,
-            "typeOfExerciseId": 1
-        },
-        {
-            "id": 3,
-            "name": "Deadlift",
-            "muscleGroupId": 3,
-            "typeOfExerciseId": 1
-        },
-        {
-            "id": 4,
-            "name": "Overhead Press",
-            "muscleGroupId": 7,
-            "typeOfExerciseId": 1
-        },
-        {
-            "id": 5,
-            "name": "Stiff Leg Deadlift",
-            "muscleGroupId": 3,
-            "typeOfExerciseId": 2
-        },
-        {
-            "id": 6,
-            "name": "Glute Ham Raise",
-            "muscleGroupId": 3,
-            "typeOfExerciseId": 4
-        },
-        {
-            "id": 7,
-            "name": "Leg Extension",
-            "muscleGroupId": 2,
-            "typeOfExerciseId": 4
-        },
-        {
-            "id": 8,
-            "name": "Pause Squat",
-            "muscleGroupId": 2,
-            "typeOfExerciseId": 3
-        },
-        {
-            "id": 9,
-            "name": "Pin Squat",
-            "muscleGroupId": 2,
-            "typeOfExerciseId": 3
-        },
-        {
-            "id": 10,
-            "name": "Barbell Row",
-            "muscleGroupId": 6,
-            "typeOfExerciseId": 2
-        },
-        {
-            "id": 11,
-            "name": "T-Bar Row",
-            "muscleGroupId": 6,
-            "typeOfExerciseId": 2
-        },
-        {
-            "id": 12,
-            "name": "Dumbbell Bench",
-            "muscleGroupId": 1,
-            "typeOfExerciseId": 2
-        },
-        {
-            "id": 13,
-            "name": "Tricep Extension",
-            "muscleGroupId": 4,
-            "typeOfExerciseId": 4
-        },
-        {
-            "id": 14,
-            "name": "Face Pull",
-            "muscleGroupId": 7,
-            "typeOfExerciseId": 4
-        },
-        {
-            "id": 15,
-            "name": "Rack Pull",
-            "muscleGroupId": 6,
-            "typeOfExerciseId": 2
-        },
-        {
-            "id": 16,
-            "name": "Front Squat",
-            "muscleGroupId": 2,
-            "typeOfExerciseId": 1
-        },
-        {
-            "id": 17,
-            "name": "Back Extension",
-            "muscleGroupId": 6,
-            "typeOfExerciseId": 4
-        },
-        {
-            "id": 18,
-            "name": "Trap Bar Deadlift",
-            "muscleGroupId": 2,
-            "typeOfExerciseId": 2
-        },
-        {
-            "id": 19,
-            "name": "Push Press",
-            "muscleGroupId": 7,
-            "typeOfExerciseId": 3
-        },
-        {
-            "id": 20,
-            "name": "Speed Squat",
-            "muscleGroupId": 2,
-            "typeOfExerciseId": 3
-        },
-        {
-            "id": 21,
-            "name": "Speed Deadlift",
-            "muscleGroupId": 3,
-            "typeOfExerciseId": 3
-        },
-        {
-            "id": 22,
-            "name": "Paused Bench",
-            "muscleGroupId": 1,
-            "typeOfExerciseId": 3
-        },
-        {
-            "id": 23,
-            "name": "Cable Row",
-            "muscleGroupId": 6,
-            "typeOfExerciseId": 4
-        },
-        {
-            "id": 24,
-            "name": "Incline Bench Press",
-            "muscleGroupId": 1,
-            "typeOfExerciseId": 2
-        },
-        {
-            "id": 25,
-            "name": "Behind Neck Press",
-            "muscleGroupId": 7,
-            "typeOfExerciseId": 2
-        },
-        {
-            "id": 26,
-            "name": "Behind Neck Pulldown",
-            "muscleGroupId": 6,
-            "typeOfExerciseId": 2
-        },
-        {
-            "id": 27,
-            "name": "SlingShot Bench",
-            "muscleGroupId": 1,
-            "typeOfExerciseId": 3
-        },
-        {
-            "id": 28,
-            "name": "Deficit Deadlift",
-            "muscleGroupId": 3,
-            "typeOfExerciseId": 2
-        }
-    ],
-    "muscleGroups": [
-        {
-            "id": 1,
-            "name": "chest"
-        },
-        {
-            "id": 2,
-            "name": "quads"
-        },
-        {
-            "id": 3,
-            "name": "hamstrings"
-        },
-        {
-            "id": 4,
-            "name": "triceps"
-        },
-        {
-            "id": 5,
-            "name": "biceps"
-        },
-        {
-            "id": 6,
-            "name": "back"
-        },
-        {
-            "id": 7,
-            "name": "shoulders"
-        },
-        {
-            "id": 8,
-            "name": "abs"
-        }
-    ],
-    "typeOfExercises": [
-        {
-            "id": 1,
-            "name": "strength",
-            "repRange": [4, 5, 6]
-        },
-        {
-            "id": 2,
-            "name": "hypertrophy",
-            "repRange": [8, 9, 10, 11, 12]
-        },
-        {
-            "id": 3,
-            "name": "power",
-            "repRange": [2, 3, 4]
-        },
-        {
-            "id": 4,
-            "name": "recovery/endurance",
-            "repRange": [12, 13, 14, 15, 16, 17, 18, 19, 20]
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "name": "Pablo"
-        }
-    ],
-    "workouts": [
-        {
-            "name": "exampleWorkout1",
-            "id": 1,
-            "exerciseId": [1, 2, 3],
-            "modifiedExercises": [
-                {
-                    "name": "exampleExercise",
-                    "id": 1,
-                    "reps": 5
-                }
-            ],
-            "daysId": ["2", "4", "6"],
-            "programId": "1"
-        },
-        {
-            "name": "testingagain",
-            "daysId": ["1", "2", "3", "4", "5", "6", "7"],
-            "programId": "1",
-            "id": 4,
-            "modifiedExercises": []
-        },
-        {
-            "name": "jenbnbs workout",
-            "daysId": ["2", "4", "6"],
-            "programId": "1",
-            "modifiedExercises": [],
-            "id": 5
-        }
-    ],
-    "days": [
-        {
-            "id": 1,
-            "name": "Sunday"
-        },
-        {
-            "id": 2,
-            "name": "Monday"
-        },
-        {
-            "id": 3,
-            "name": "Tuesday"
-        },
-        {
-            "id": 4,
-            "name": "Wednesday"
-        },
-        {
-            "id": 5,
-            "name": "Thursday"
-        },
-        {
-            "id": 6,
-            "name": "Friday"
-        },
-        {
-            "id": 7,
-            "name": "Saturday"
-        }
-    ],
-    "programs": [
-        {
-            "name": "exampleProgram",
-            "workoutId": [1],
-            "id": 1
-        },
-        {
-            "name": "testupdated",
-            "workoutId": [],
-            "id": 3
-        },
-        {
-            "name": "Jordan Williams",
-            "workoutId": [],
-            "id": 4
-        }
-    ],
-    "exerciseWorkoutCross": [
-        {
-            "exerciseId": 1,
-            "workoutId": 1,
-            "reps": "3"
-        },
-        {
-            "exerciseId": 2,
-            "workoutId": 1,
-            "reps": "5"
-        },
-        {
-            "exerciseId": 3,
-            "workoutId": 1,
-            "reps": "8"
-        }
-    ]
+  "exercises": [
+    {
+      "id": 1,
+      "name": "Bench Press",
+      "muscleGroupId": 1,
+      "typeOfExerciseId": 1
+    },
+    {
+      "id": 2,
+      "name": "Squat",
+      "muscleGroupId": 2,
+      "typeOfExerciseId": 1
+    },
+    {
+      "id": 3,
+      "name": "Deadlift",
+      "muscleGroupId": 3,
+      "typeOfExerciseId": 1
+    },
+    {
+      "id": 4,
+      "name": "Overhead Press",
+      "muscleGroupId": 7,
+      "typeOfExerciseId": 1
+    },
+    {
+      "id": 5,
+      "name": "Stiff Leg Deadlift",
+      "muscleGroupId": 3,
+      "typeOfExerciseId": 2
+    },
+    {
+      "id": 6,
+      "name": "Glute Ham Raise",
+      "muscleGroupId": 3,
+      "typeOfExerciseId": 4
+    },
+    {
+      "id": 7,
+      "name": "Leg Extension",
+      "muscleGroupId": 2,
+      "typeOfExerciseId": 4
+    },
+    {
+      "id": 8,
+      "name": "Pause Squat",
+      "muscleGroupId": 2,
+      "typeOfExerciseId": 3
+    },
+    {
+      "id": 9,
+      "name": "Pin Squat",
+      "muscleGroupId": 2,
+      "typeOfExerciseId": 3
+    },
+    {
+      "id": 10,
+      "name": "Barbell Row",
+      "muscleGroupId": 6,
+      "typeOfExerciseId": 2
+    },
+    {
+      "id": 11,
+      "name": "T-Bar Row",
+      "muscleGroupId": 6,
+      "typeOfExerciseId": 2
+    },
+    {
+      "id": 12,
+      "name": "Dumbbell Bench",
+      "muscleGroupId": 1,
+      "typeOfExerciseId": 2
+    },
+    {
+      "id": 13,
+      "name": "Tricep Extension",
+      "muscleGroupId": 4,
+      "typeOfExerciseId": 4
+    },
+    {
+      "id": 14,
+      "name": "Face Pull",
+      "muscleGroupId": 7,
+      "typeOfExerciseId": 4
+    },
+    {
+      "id": 15,
+      "name": "Rack Pull",
+      "muscleGroupId": 6,
+      "typeOfExerciseId": 2
+    },
+    {
+      "id": 16,
+      "name": "Front Squat",
+      "muscleGroupId": 2,
+      "typeOfExerciseId": 1
+    },
+    {
+      "id": 17,
+      "name": "Back Extension",
+      "muscleGroupId": 6,
+      "typeOfExerciseId": 4
+    },
+    {
+      "id": 18,
+      "name": "Trap Bar Deadlift",
+      "muscleGroupId": 2,
+      "typeOfExerciseId": 2
+    },
+    {
+      "id": 19,
+      "name": "Push Press",
+      "muscleGroupId": 7,
+      "typeOfExerciseId": 3
+    },
+    {
+      "id": 20,
+      "name": "Speed Squat",
+      "muscleGroupId": 2,
+      "typeOfExerciseId": 3
+    },
+    {
+      "id": 21,
+      "name": "Speed Deadlift",
+      "muscleGroupId": 3,
+      "typeOfExerciseId": 3
+    },
+    {
+      "id": 22,
+      "name": "Paused Bench",
+      "muscleGroupId": 1,
+      "typeOfExerciseId": 3
+    },
+    {
+      "id": 23,
+      "name": "Cable Row",
+      "muscleGroupId": 6,
+      "typeOfExerciseId": 4
+    },
+    {
+      "id": 24,
+      "name": "Incline Bench Press",
+      "muscleGroupId": 1,
+      "typeOfExerciseId": 2
+    },
+    {
+      "id": 25,
+      "name": "Behind Neck Press",
+      "muscleGroupId": 7,
+      "typeOfExerciseId": 2
+    },
+    {
+      "id": 26,
+      "name": "Behind Neck Pulldown",
+      "muscleGroupId": 6,
+      "typeOfExerciseId": 2
+    },
+    {
+      "id": 27,
+      "name": "SlingShot Bench",
+      "muscleGroupId": 1,
+      "typeOfExerciseId": 3
+    },
+    {
+      "id": 28,
+      "name": "Deficit Deadlift",
+      "muscleGroupId": 3,
+      "typeOfExerciseId": 2
+    }
+  ],
+  "muscleGroups": [
+    {
+      "id": 1,
+      "name": "chest"
+    },
+    {
+      "id": 2,
+      "name": "quads"
+    },
+    {
+      "id": 3,
+      "name": "hamstrings"
+    },
+    {
+      "id": 4,
+      "name": "triceps"
+    },
+    {
+      "id": 5,
+      "name": "biceps"
+    },
+    {
+      "id": 6,
+      "name": "back"
+    },
+    {
+      "id": 7,
+      "name": "shoulders"
+    },
+    {
+      "id": 8,
+      "name": "abs"
+    }
+  ],
+  "typeOfExercises": [
+    {
+      "id": 1,
+      "name": "strength",
+      "repRange": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": 2,
+      "name": "hypertrophy",
+      "repRange": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": 3,
+      "name": "power",
+      "repRange": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 4,
+      "name": "recovery/endurance",
+      "repRange": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Pablo"
+    }
+  ],
+  "workouts": [
+    {
+      "name": "exampleWorkout1",
+      "id": 1,
+      "programId": 1
+    },
+    {
+      "name": "testingagain",
+      "programId": 1,
+      "id": 4
+    },
+    {
+      "name": "jenbnbs workout",
+      "programId": 1,
+      "id": 5
+    }
+  ],
+  "days": [
+    {
+      "id": 1,
+      "name": "Sunday"
+    },
+    {
+      "id": 2,
+      "name": "Monday"
+    },
+    {
+      "id": 3,
+      "name": "Tuesday"
+    },
+    {
+      "id": 4,
+      "name": "Wednesday"
+    },
+    {
+      "id": 5,
+      "name": "Thursday"
+    },
+    {
+      "id": 6,
+      "name": "Friday"
+    },
+    {
+      "id": 7,
+      "name": "Saturday"
+    }
+  ],
+  "programs": [
+    {
+      "name": "exampleProgram",
+      "id": 1
+    },
+    {
+      "name": "testupdated",
+      "id": 3
+    },
+    {
+      "name": "Jordan Williams",
+      "id": 4
+    }
+  ],
+  "exerciseWorkoutCross": [
+    {
+      "exerciseId": "1",
+      "wrkId": 4,
+      "rep": "4",
+      "id": 1
+    },
+    {
+      "exerciseId": "2",
+      "wrkId": 4,
+      "rep": "6",
+      "id": 2
+    },
+    {
+      "exerciseId": "3",
+      "wrkId": 4,
+      "rep": "6",
+      "id": 3
+    },
+    {
+      "exerciseId": "1",
+      "wrkId": 1,
+      "rep": "6",
+      "id": 4
+    },
+    {
+      "exerciseId": "1",
+      "wrkId": 1,
+      "rep": "5",
+      "id": 5
+    }
+  ]
 }

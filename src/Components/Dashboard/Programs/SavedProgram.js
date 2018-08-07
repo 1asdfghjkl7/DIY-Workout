@@ -4,10 +4,10 @@ import API from "../../APIManager/APIManager";
 import "./SavedProgram.css";
 import WorkoutForm from "./WorkoutForm";
 import WorkoutTitle from "./WorkoutTitle";
+import { Button } from "semantic-ui-react";
 
 export default class SavedProgram extends Component {
     state = {
-        days: [],
         modalOpen: false,
         workouts: [],
         idOfProgram: this.props.location.pathname.slice(34)
@@ -31,8 +31,7 @@ export default class SavedProgram extends Component {
 
     postWorkout = () => {
         const name = document.querySelector("#name").value;
-        const days = this.state.days;
-        API.POSTWorkout(name, days, this.state.idOfProgram);
+        API.POSTWorkout(name, this.state.idOfProgram);
         this.handleClose();
     };
 
@@ -84,18 +83,28 @@ export default class SavedProgram extends Component {
             );
         } else {
             return (
-                <Link
-                    to={{
-                        pathname: `/Dashboard/Programs/SavedPrograms/${
-                            program.id
-                        }`,
-                        state: { program: program }
-                    }}
-                >
-                    <div>
-                        <h1 key={program.id}>{program.name}</h1>
-                    </div>
-                </Link>
+                <div>
+                    <Link
+                        to={{
+                            pathname: `/Dashboard/Programs/SavedPrograms/${
+                                program.id
+                            }`,
+                            state: { program: program }
+                        }}
+                    >
+                        <div>
+                            <h1 key={program.id}>{program.name}</h1>
+                        </div>
+                    </Link>
+                    <Button
+                        color="red"
+                        onClick={() => {
+                            API.DELETEProgram(program.id);
+                        }}
+                    >
+                        Delete
+                    </Button>
+                </div>
             );
         }
     }

@@ -16,7 +16,7 @@ class APIManager {
         return fetch("http://localhost:5002/programs/").then(e => e.json());
     }
 
-    POSTWorkout(name, days, programId) {
+    POSTWorkout(name, programId) {
         return fetch("http://localhost:5002/workouts/", {
             method: "POST",
             headers: {
@@ -24,9 +24,7 @@ class APIManager {
             },
             body: JSON.stringify({
                 name: name,
-                daysId: days,
-                programId: programId,
-                modifiedExercises: []
+                programId: programId
             })
         }).then(e => e.json());
     }
@@ -40,30 +38,43 @@ class APIManager {
     }
 
     GETTypeOfExercise() {
-        return fetch("http://localhost:5002/typeOfExercise/").then(e =>
+        return fetch("http://localhost:5002/typeOfExercises/").then(e =>
             e.json()
         );
     }
 
-    ForExerciseForm() {
-        return fetch(
-            "http://localhost:5002/exercises?_expand=typeOfExercise"
-        ).then(e => e.json());
-    }
-
     //useExerciseWorkoutCross not ModifiedExercise. nested json doesnt work.
     POSTModifiedExercise(exId, wrkId, rep) {
-        return fetch("http://localhost:5002/exerciseWorkoutCross", {
+        // fetch("http://localhost:5002/exerciseWorkoutCross/")
+        // if (Response.length === 0) {
+
+        // }
+        return fetch("http://localhost:5002/exerciseWorkoutCross/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                exId: exId,
+                exerciseId: exId,
                 wrkId: wrkId,
                 rep: rep
             })
-        }).then(e => e.json());
+        });
+    }
+
+    GETExerciseWorkoutCross() {
+        return fetch(
+            "http://localhost:5002/exerciseWorkoutCross?_expand=exercise"
+        ).then(e => e.json());
+    }
+
+    DELETEProgram(id) {
+        return fetch(`http://localhost:5002/programs/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
     }
 }
 
