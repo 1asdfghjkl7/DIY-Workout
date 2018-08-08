@@ -1,5 +1,5 @@
 class APIManager {
-    POSTProgram(name) {
+    POSTProgram(name, userId) {
         return fetch("http://localhost:5002/programs/", {
             method: "POST",
             headers: {
@@ -7,7 +7,7 @@ class APIManager {
             },
             body: JSON.stringify({
                 name: name,
-                workoutId: []
+                userId: userId
             })
         }).then(e => e.json());
     }
@@ -43,6 +43,10 @@ class APIManager {
         );
     }
 
+    GETUsers() {
+        return fetch("http://localhost:5002/users").then(e => e.json());
+    }
+
     //useExerciseWorkoutCross not ModifiedExercise. nested json doesnt work.
     POSTModifiedExercise(exId, wrkId, rep) {
         // fetch("http://localhost:5002/exerciseWorkoutCross/")
@@ -60,6 +64,12 @@ class APIManager {
                 rep: rep
             })
         });
+    }
+
+    GETUserProgramCross() {
+        return fetch("http://localhost:5002/userProgramCross").then(e =>
+            e.json()
+        );
     }
 
     GETExerciseWorkoutCross() {

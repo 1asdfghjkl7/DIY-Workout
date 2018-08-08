@@ -48,7 +48,7 @@ export default class WorkoutTitle extends Component {
         const workoutId = this.props.workout.programId;
         const idOfProgram = parseInt(this.props.idOfProgram, 8);
         if (
-            workoutId === idOfProgram
+            workoutId == idOfProgram
             // this.props.url ===
             // `/Dashboard/Programs/SavedPrograms/${this.props.program.id}`
         ) {

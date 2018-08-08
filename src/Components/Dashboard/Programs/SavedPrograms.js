@@ -5,7 +5,8 @@ import "./SavedPrograms.css";
 
 export default class SavedPrograms extends Component {
     state = {
-        programs: []
+        programs: [],
+        userProgramCross: []
     };
 
     componentDidMount() {
@@ -14,19 +15,28 @@ export default class SavedPrograms extends Component {
                 programs: response
             });
         });
+        API.GETUserProgramCross().then(response => {
+            this.setState({
+                userProgramCross: response
+            });
+        });
     }
 
     render() {
-        return (
-            <React.Fragment>
-                {this.state.programs.map(program => (
-                    <SavedProgram
-                        key={program.id}
-                        program={program}
-                        location={this.props.location}
-                    />
-                ))}
-            </React.Fragment>
-        );
+        return this.state.programs.map(program => {
+            if (program.userId == localStorage.getItem("boi")) {
+                return (
+                    <React.Fragment>
+                        <SavedProgram
+                            key={program.id}
+                            program={program}
+                            location={this.props.location}
+                        />
+                    </React.Fragment>
+                );
+            } else {
+                return null;
+            }
+        });
     }
 }

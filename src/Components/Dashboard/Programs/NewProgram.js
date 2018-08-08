@@ -7,7 +7,11 @@ export default class NewProgram extends Component {
             <React.Fragment>
                 <form
                     onSubmit={() => {
-                        API.POSTProgram(document.getElementById("name").value);
+                        API.POSTProgram(
+                            document.getElementById("name").value,
+                            localStorage.getItem("boi")
+                        );
+                        // API.POSTUserProgramCross(localStorage.getItem("boi"))
                     }}
                 >
                     <Label
