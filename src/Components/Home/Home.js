@@ -8,6 +8,7 @@ export default class Home extends Component {
     // calls the logout method in authentication service
     logout = () => {
         this.props.auth.logout();
+        window.location.reload();
     };
     render() {
         // calls the isAuthenticated method in authentication service
@@ -15,19 +16,19 @@ export default class Home extends Component {
         return (
             <div>
                 {isAuthenticated() && (
-                    // <div className="container column">
-                    //     <h5>
-                    //         You are logged in!{" "}
-                    //         <a
-                    //             style={{ cursor: "pointer" }}
-                    //             onClick={this.logout}
-                    //         >
-                    //             Log Out
-                    //         </a>.
-                    //     </h5>
+                    <div className="container column">
+                        <h5>
+                            You are logged in!{" "}
+                            <a
+                                style={{ cursor: "pointer" }}
+                                onClick={this.logout}
+                            >
+                                Log Out
+                            </a>.
+                        </h5>
 
-                    <React.Fragment />
-                    // </div>
+                        {/* <React.Fragment /> */}
+                    </div>
                 )}
                 {!isAuthenticated() && (
                     <div className="container column">

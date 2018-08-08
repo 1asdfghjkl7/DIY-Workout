@@ -7,6 +7,14 @@ export default class NavBar extends Component {
         return (
             <Menu>
                 <Link
+                    to="/"
+                    // onClick={() => {
+                    //     window.location.reload();
+                    // }}
+                >
+                    <Menu.Item name="Logout" />
+                </Link>
+                <Link
                     to="/Dashboard"
                     // onClick={() => {
                     //     window.location.reload();
