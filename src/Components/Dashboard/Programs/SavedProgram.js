@@ -35,6 +35,7 @@ export default class SavedProgram extends Component {
         const name = document.querySelector("#name").value;
         API.POSTWorkout(name, this.state.idOfProgram);
         this.handleClose();
+        window.location.reload();
     };
 
     componentDidMount() {

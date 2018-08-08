@@ -9,7 +9,7 @@ export default class Auth {
         redirectUri: "http://localhost:3000/callback",
         audience: "https://brettjennaustin.auth0.com/userinfo",
         responseType: "token id_token",
-        scope: "openid"
+        scope: "openid email"
     });
 
     login = () => {
@@ -21,6 +21,7 @@ export default class Auth {
         this.auth0.parseHash((err, authResult) => {
             if (authResult && authResult.accessToken && authResult.idToken) {
                 this.setSession(authResult);
+                this.getCurrentUser();
                 history.replace("/");
             } else if (err) {
                 history.replace("/");
@@ -59,4 +60,44 @@ export default class Auth {
         let expiresAt = JSON.parse(localStorage.getItem("expires_at"));
         return new Date().getTime() < expiresAt;
     };
+
+    getCurrentUser() {
+        return new Promise((resolve, reject) => {
+            const boiId = localStorage.getItem("boi");
+
+            if (boiId !== null) {
+                resolve(boiId);
+            } else {
+                const accessToken = localStorage.getItem("access_token");
+                this.auth0.client.userInfo(accessToken, (err, profile) => {
+                    if (profile) {
+                        fetch(`http://localhost:5002/users?sub=${profile.sub}`)
+                            .then(u => u.json())
+                            .then(users => {
+                                if (users.length) {
+                                    localStorage.setItem("boi", users[0].id);
+                                    resolve(users[0].id);
+                                } else {
+                                    fetch(`http://localhost:5002/users`, {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json"
+                                        },
+                                        body: JSON.stringify(profile)
+                                    })
+                                        .then(user => user.json())
+                                        .then(user => {
+                                            localStorage.setItem(
+                                                "boi",
+                                                user.id
+                                            );
+                                            resolve(user.id);
+                                        });
+                                }
+                            });
+                    }
+                });
+            }
+        });
+    }
 }

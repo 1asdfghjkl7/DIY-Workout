@@ -1,8 +1,9 @@
 import React from "react";
+import "./Callback.css";
 
 const Callback = () => (
     <div className="container">
-        <h1>CLICK ON DASHBOARD</h1>
+        <h1>You're Logged In!</h1>
     </div>
 );
 
