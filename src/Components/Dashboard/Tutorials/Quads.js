@@ -8,7 +8,7 @@ export default class Quads extends Component {
                     <h1>Squat</h1>
                     <iframe
                         title="Squat"
-                        width="560"
+                        width="375"
                         height="315"
                         src="https://www.youtube.com/embed/BnQhf9RV2Uk?rel=0"
                         frameBorder="0"
@@ -21,7 +21,7 @@ export default class Quads extends Component {
                     <h1>Pause Squat</h1>
                     <iframe
                         title="Pause Squat"
-                        width="560"
+                        width="375"
                         height="315"
                         src="https://www.youtube.com/embed/HV711kwdeQw?rel=0"
                         frameBorder="0"
@@ -34,7 +34,7 @@ export default class Quads extends Component {
                     <h1>Pin Squat</h1>
                     <iframe
                         title="Pin Squat"
-                        width="560"
+                        width="375"
                         height="315"
                         src="https://www.youtube.com/embed/R8AjxwsHDZU?rel=0"
                         frameBorder="0"

@@ -7,14 +7,18 @@ export default class Dashboard extends Component {
     render() {
         return (
             <React.Fragment>
-                <div id="Buttons">
-                    <Link to="/Dashboard/Programs">
-                        <Button size="massive">Programs</Button>
-                    </Link>
-                    <Link to="/Dashboard/Tutorials">
-                        <Button size="massive">Tutorials</Button>
-                    </Link>
-                </div>
+                <ul>
+                    <li>
+                        <Link to="/Dashboard/Programs">
+                            <Button size="massive">Programs</Button>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/Dashboard/Tutorials">
+                            <Button size="massive">Tutorials</Button>
+                        </Link>
+                    </li>
+                </ul>
             </React.Fragment>
         );
     }

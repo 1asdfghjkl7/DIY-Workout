@@ -1,18 +1,14 @@
-#Buttons {
-    display: flex;
-    /* justify-content: center; */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+li:first-of-type {
+    margin-top: 1rem;
+}
+li:last-of-type {
+    margin-top: 2rem;
 }
 
-/* #Buttons > button {
-    padding: 3rem;
-} */
-/* 
-button:first-of-type {
-    margin-top: 3rem;
-    margin-right: 2rem;
+button {
+    width: 100%;
 }
-
-button:last-of-type {
-    margin-left: 2rem;
-    margin-top: 3rem;
-} */

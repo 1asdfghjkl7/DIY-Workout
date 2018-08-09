@@ -47,6 +47,9 @@ export default class WorkoutTitle extends Component {
     render() {
         const workoutId = this.props.workout.programId;
         const idOfProgram = parseInt(this.props.idOfProgram, 8);
+        const buttonStyle = {
+            width: "50vw"
+        };
         if (
             workoutId == idOfProgram
             // this.props.url ===
@@ -60,18 +63,22 @@ export default class WorkoutTitle extends Component {
                                 <h3 onClick={this.handleDetails}>
                                     {this.state.input}
                                 </h3>
-                                <Button
-                                    onClick={this.changeToggle}
-                                    color="yellow"
-                                >
-                                    Edit
-                                </Button>
-                                <Button
-                                    onClick={this.deleteWorkout}
-                                    color="red"
-                                >
-                                    Delete
-                                </Button>
+                                <Button.Group>
+                                    <Button
+                                        style={buttonStyle}
+                                        onClick={this.changeToggle}
+                                        color="yellow"
+                                    >
+                                        Edit
+                                    </Button>
+                                    <Button
+                                        style={buttonStyle}
+                                        onClick={this.deleteWorkout}
+                                        color="red"
+                                    >
+                                        Delete
+                                    </Button>
+                                </Button.Group>
                             </div>
                         ) : (
                             <div>

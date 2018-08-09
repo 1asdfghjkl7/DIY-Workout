@@ -5,7 +5,7 @@ ul {
 li:first-of-type {
     margin-top: 1rem;
 }
-li:last-of-type {
+li {
     margin-top: 2rem;
 }
 

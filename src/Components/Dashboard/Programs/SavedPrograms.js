@@ -26,9 +26,8 @@ export default class SavedPrograms extends Component {
         return this.state.programs.map(program => {
             if (program.userId == localStorage.getItem("boi")) {
                 return (
-                    <React.Fragment>
+                    <React.Fragment key={program.id}>
                         <SavedProgram
-                            key={program.id}
                             program={program}
                             location={this.props.location}
                         />
