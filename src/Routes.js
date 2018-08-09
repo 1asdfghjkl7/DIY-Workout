@@ -10,6 +10,14 @@ import NewProgram from "./Components/Dashboard/Programs/NewProgram";
 import SavedPrograms from "./Components/Dashboard/Programs/SavedPrograms";
 import SavedProgram from "./Components/Dashboard/Programs/SavedProgram";
 import ExerciseFormPageHolder from "./Components/Dashboard/Programs/ExerciseFormPageHolder";
+import Chest from "./Components/Dashboard/Tutorials/Chest";
+import Quads from "./Components/Dashboard/Tutorials/Quads";
+import Hamstrings from "./Components/Dashboard/Tutorials/Hamstrings";
+import Triceps from "./Components/Dashboard/Tutorials/Triceps";
+import Biceps from "./Components/Dashboard/Tutorials/Biceps";
+import Back from "./Components/Dashboard/Tutorials/Back";
+import Shoulders from "./Components/Dashboard/Tutorials/Shoulders";
+import Abs from "./Components/Dashboard/Tutorials/Abs";
 
 const auth = new Auth();
 
@@ -52,6 +60,46 @@ const Routes = () => (
             exact
             path="/Dashboard/Tutorials"
             render={props => <Tutorials {...props} />}
+        />
+        <Route
+            exact
+            path="/Dashboard/Tutorials/Chest"
+            render={props => <Chest {...props} />}
+        />
+        <Route
+            exact
+            path="/Dashboard/Tutorials/Quads"
+            render={props => <Quads {...props} />}
+        />
+        <Route
+            exact
+            path="/Dashboard/Tutorials/Hamstrings"
+            render={props => <Hamstrings {...props} />}
+        />
+        <Route
+            exact
+            path="/Dashboard/Tutorials/Triceps"
+            render={props => <Triceps {...props} />}
+        />
+        <Route
+            exact
+            path="/Dashboard/Tutorials/Biceps"
+            render={props => <Biceps {...props} />}
+        />
+        <Route
+            exact
+            path="/Dashboard/Tutorials/Back"
+            render={props => <Back {...props} />}
+        />
+        <Route
+            exact
+            path="/Dashboard/Tutorials/Shoulders"
+            render={props => <Shoulders {...props} />}
+        />
+        <Route
+            exact
+            path="/Dashboard/Tutorials/Abs"
+            render={props => <Abs {...props} />}
         />
         <Route
             exact
