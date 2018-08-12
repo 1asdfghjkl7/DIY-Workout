@@ -10,12 +10,16 @@ export default class Dashboard extends Component {
                 <ul>
                     <li>
                         <Link to="/Dashboard/Programs">
-                            <Button size="massive">Programs</Button>
+                            <Button color="orange" size="massive">
+                                Programs
+                            </Button>
                         </Link>
                     </li>
                     <li>
                         <Link to="/Dashboard/Tutorials">
-                            <Button size="massive">Tutorials</Button>
+                            <Button color="orange" size="massive">
+                                Tutorials
+                            </Button>
                         </Link>
                     </li>
                 </ul>

@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import API from "../../APIManager/APIManager";
 import { Button, Input, Label } from "semantic-ui-react";
+import "./NewProgram.css";
 export default class NewProgram extends Component {
     render() {
+        const labelStyle = {
+            margin: "0 0 0 20vw"
+        };
         return (
             <React.Fragment>
                 <form
@@ -15,14 +19,14 @@ export default class NewProgram extends Component {
                     }}
                 >
                     <Label
-                        pointing="right"
+                        style={labelStyle}
                         color="blue"
-                        size="massive"
+                        size="huge"
                         htmlFor="name"
                     >
                         Name of Program
                     </Label>
-                    <Input size="massive" id="name" name="name" type="text" />
+                    <Input size="large" id="name" name="name" type="text" />
                     <Button size="massive">Save</Button>
                 </form>
             </React.Fragment>
