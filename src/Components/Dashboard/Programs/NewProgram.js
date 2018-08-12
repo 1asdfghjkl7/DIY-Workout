@@ -27,7 +27,9 @@ export default class NewProgram extends Component {
                         Name of Program
                     </Label>
                     <Input size="large" id="name" name="name" type="text" />
-                    <Button size="massive">Save</Button>
+                    <Button color="orange" size="massive">
+                        Save
+                    </Button>
                 </form>
             </React.Fragment>
         );

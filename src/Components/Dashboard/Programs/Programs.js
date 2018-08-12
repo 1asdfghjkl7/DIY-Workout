@@ -10,12 +10,16 @@ export default class Programs extends Component {
                 <ul>
                     <li>
                         <Link to="/Dashboard/Programs/NewProgram">
-                            <Button size="massive">New</Button>
+                            <Button color="orange" size="massive">
+                                New
+                            </Button>
                         </Link>
                     </li>
                     <li>
                         <Link to="/Dashboard/Programs/SavedPrograms">
-                            <Button size="massive">Saved</Button>
+                            <Button color="orange" size="massive">
+                                Saved
+                            </Button>
                         </Link>
                     </li>
                 </ul>
