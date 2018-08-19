@@ -6,7 +6,8 @@ import "./Navbar.css";
 export default class NavBar extends Component {
     render() {
         const dashboardMenuItem = {
-            padding: "0 25vw 0 25vw"
+            padding: "0 25vw 0 25vw",
+            "border-style": "none"
         };
         return (
             <Menu>

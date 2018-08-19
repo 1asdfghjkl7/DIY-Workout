@@ -6,7 +6,9 @@ export default class WorkoutForm extends Component {
         return (
             <Modal
                 trigger={
-                    <Button onClick={this.props.handleOpen}>Add Workout</Button>
+                    <Button color="orange" onClick={this.props.handleOpen}>
+                        Add Workout
+                    </Button>
                 }
                 open={this.props.modalOpen}
                 onClose={this.props.handleClose}

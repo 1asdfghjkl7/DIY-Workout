@@ -13,7 +13,7 @@ export default class Tutorials extends Component {
                                 pathname: "Tutorials/Chest"
                             }}
                         >
-                            <Button>chest</Button>
+                            <Button color="orange">chest</Button>
                         </Link>
                     </li>
                     <li>
@@ -22,7 +22,7 @@ export default class Tutorials extends Component {
                                 pathname: "Tutorials/Quads"
                             }}
                         >
-                            <Button>quads</Button>
+                            <Button color="orange">quads</Button>
                         </Link>
                     </li>
                     <li>
@@ -31,7 +31,7 @@ export default class Tutorials extends Component {
                                 pathname: "Tutorials/Hamstrings"
                             }}
                         >
-                            <Button>hamstrings</Button>
+                            <Button color="orange">hamstrings</Button>
                         </Link>
                     </li>
                     <li>
@@ -40,7 +40,7 @@ export default class Tutorials extends Component {
                                 pathname: "Tutorials/Triceps"
                             }}
                         >
-                            <Button>triceps</Button>
+                            <Button color="orange">triceps</Button>
                         </Link>
                     </li>
                     <li>
@@ -49,7 +49,7 @@ export default class Tutorials extends Component {
                                 pathname: "Tutorials/Biceps"
                             }}
                         >
-                            <Button>biceps</Button>
+                            <Button color="orange">biceps</Button>
                         </Link>
                     </li>
                     <li>
@@ -58,7 +58,7 @@ export default class Tutorials extends Component {
                                 pathname: "Tutorials/Back"
                             }}
                         >
-                            <Button>back</Button>
+                            <Button color="orange">back</Button>
                         </Link>
                     </li>
                     <li>
@@ -67,7 +67,7 @@ export default class Tutorials extends Component {
                                 pathname: "Tutorials/Shoulders"
                             }}
                         >
-                            <Button>shoulders</Button>
+                            <Button color="orange">shoulders</Button>
                         </Link>
                     </li>
                     <li>
@@ -76,7 +76,7 @@ export default class Tutorials extends Component {
                                 pathname: "Tutorials/Abs"
                             }}
                         >
-                            <Button>abs</Button>
+                            <Button color="orange">abs</Button>
                         </Link>
                     </li>
                 </ul>

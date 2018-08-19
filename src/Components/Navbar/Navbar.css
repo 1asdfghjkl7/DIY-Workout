@@ -2,3 +2,7 @@
     padding-left: 0.23rem;
     padding-right: 0.23rem;
 }
+
+button.ui.orange.button {
+    margin-bottom: 0 !important;
+}

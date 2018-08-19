@@ -67,7 +67,7 @@ export default class WorkoutTitle extends Component {
                                     <Button
                                         style={buttonStyle}
                                         onClick={this.changeToggle}
-                                        color="yellow"
+                                        color="blue"
                                     >
                                         Edit
                                     </Button>
@@ -114,7 +114,7 @@ export default class WorkoutTitle extends Component {
                                 state: this.props.workout.id
                             }}
                         >
-                            <Button>add exercise</Button>
+                            <Button color="orange">add exercise</Button>
                         </Link>
                     ) : null}
                 </React.Fragment>

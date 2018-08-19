@@ -79,7 +79,7 @@ export default class SavedProgram extends Component {
                     {this.state.toggle ? (
                         <div>
                             <h1>{this.state.input}</h1>
-                            <Button onClick={this.changeToggle} color="yellow">
+                            <Button onClick={this.changeToggle} color="blue">
                                 Edit
                             </Button>
                         </div>

@@ -27,8 +27,7 @@ export default class Workout extends Component {
             cross =>
                 this.props.workout.id === cross.wrkId ? (
                     <div key={cross.id}>
-                        <h3>{cross.exercise.name}</h3>
-                        <h3>{cross.rep}</h3>
+                        <h2>{`${cross.exercise.name}:    ${cross.rep}`}</h2>
                         <Button
                             onClick={this.deleteExercise}
                             id={cross.id}
