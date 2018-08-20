@@ -6,8 +6,7 @@ export default class Auth {
     auth0 = new auth0.WebAuth({
         domain: "brettjennaustin.auth0.com",
         clientID: "4eh1BTXS5nF5z6vjZn3c3aWtCDDKObVi",
-        redirectUri:
-            "http://diyworkout.s3-website-us-west-2.amazonaws.com/callback",
+        redirectUri: "http://localhost:3000/callback",
         audience: "https://brettjennaustin.auth0.com/userinfo",
         responseType: "token id_token",
         scope: "openid email"
@@ -73,28 +72,20 @@ export default class Auth {
                 const accessToken = localStorage.getItem("access_token");
                 this.auth0.client.userInfo(accessToken, (err, profile) => {
                     if (profile) {
-                        fetch(
-                            `https://diyworkout-json-server.herokuapp.com/users?sub=${
-                                profile.sub
-                            }`
-                        )
+                        fetch(`http://localhost:5002/users?sub=${profile.sub}`)
                             .then(u => u.json())
                             .then(users => {
                                 if (users.length) {
                                     localStorage.setItem("boi", users[0].id);
                                     resolve(users[0].id);
                                 } else {
-                                    fetch(
-                                        `https://diyworkout-json-server.herokuapp.com/users`,
-                                        {
-                                            method: "POST",
-                                            headers: {
-                                                "Content-Type":
-                                                    "application/json"
-                                            },
-                                            body: JSON.stringify(profile)
-                                        }
-                                    )
+                                    fetch(`http://localhost:5002/users`, {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json"
+                                        },
+                                        body: JSON.stringify(profile)
+                                    })
                                         .then(user => user.json())
                                         .then(user => {
                                             localStorage.setItem(

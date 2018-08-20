@@ -251,9 +251,9 @@
   ],
   "users": [
     {
-      "sub": "google-oauth2|101614372466299185983",
       "email": "jordanwilliams288@gmail.com",
       "email_verified": true,
+      "sub": "google-oauth2|101614372466299185983",
       "id": 1
     },
     {
@@ -285,9 +285,24 @@
       "id": 4
     },
     {
-      "name": "sdsfs",
+      "name": "Upper Strength",
       "programId": "2",
       "id": 5
+    },
+    {
+      "name": "Lower Strength",
+      "programId": "2",
+      "id": 6
+    },
+    {
+      "name": "Upper Hypertrophy",
+      "programId": "2",
+      "id": 7
+    },
+    {
+      "name": "Lower Hypertrophy",
+      "programId": "2",
+      "id": 8
     }
   ],
   "days": [
@@ -327,7 +342,7 @@
       "id": 1
     },
     {
-      "name": "THE Dr. Pepper",
+      "name": "Powerlifting Off-Season Program",
       "userId": "2",
       "id": 2
     },
@@ -353,8 +368,308 @@
     {
       "exerciseId": "1",
       "wrkId": 5,
-      "rep": "6",
+      "rep": "4",
       "id": 6
+    },
+    {
+      "exerciseId": "1",
+      "wrkId": 5,
+      "rep": "4",
+      "id": 7
+    },
+    {
+      "exerciseId": "1",
+      "wrkId": 5,
+      "rep": "6",
+      "id": 8
+    },
+    {
+      "exerciseId": "4",
+      "wrkId": 5,
+      "rep": "6",
+      "id": 9
+    },
+    {
+      "exerciseId": "4",
+      "wrkId": 5,
+      "rep": "6",
+      "id": 10
+    },
+    {
+      "exerciseId": "4",
+      "wrkId": 5,
+      "rep": "4",
+      "id": 11
+    },
+    {
+      "exerciseId": "14",
+      "wrkId": 5,
+      "rep": "20",
+      "id": 12
+    },
+    {
+      "exerciseId": "14",
+      "wrkId": 5,
+      "rep": "20",
+      "id": 13
+    },
+    {
+      "exerciseId": "19",
+      "wrkId": 5,
+      "rep": "4",
+      "id": 14
+    },
+    {
+      "exerciseId": "19",
+      "wrkId": 5,
+      "rep": "4",
+      "id": 15
+    },
+    {
+      "exerciseId": "22",
+      "wrkId": 5,
+      "rep": "3",
+      "id": 16
+    },
+    {
+      "exerciseId": "22",
+      "wrkId": 5,
+      "rep": "3",
+      "id": 17
+    },
+    {
+      "exerciseId": "3",
+      "wrkId": 6,
+      "rep": "5",
+      "id": 18
+    },
+    {
+      "exerciseId": "3",
+      "wrkId": 6,
+      "rep": "4",
+      "id": 19
+    },
+    {
+      "exerciseId": "3",
+      "wrkId": 6,
+      "rep": "4",
+      "id": 20
+    },
+    {
+      "exerciseId": "2",
+      "wrkId": 6,
+      "rep": "5",
+      "id": 21
+    },
+    {
+      "exerciseId": "2",
+      "wrkId": 6,
+      "rep": "5",
+      "id": 22
+    },
+    {
+      "exerciseId": "6",
+      "wrkId": 6,
+      "rep": "20",
+      "id": 23
+    },
+    {
+      "exerciseId": "9",
+      "wrkId": 6,
+      "rep": "3",
+      "id": 24
+    },
+    {
+      "exerciseId": "9",
+      "wrkId": 6,
+      "rep": "3",
+      "id": 25
+    },
+    {
+      "exerciseId": "9",
+      "wrkId": 6,
+      "rep": "3",
+      "id": 26
+    },
+    {
+      "exerciseId": "21",
+      "wrkId": 6,
+      "rep": "3",
+      "id": 27
+    },
+    {
+      "exerciseId": "21",
+      "wrkId": 6,
+      "rep": "3",
+      "id": 28
+    },
+    {
+      "exerciseId": "1",
+      "wrkId": 7,
+      "rep": "6",
+      "id": 29
+    },
+    {
+      "exerciseId": "1",
+      "wrkId": 7,
+      "rep": "6",
+      "id": 30
+    },
+    {
+      "exerciseId": "10",
+      "wrkId": 7,
+      "rep": "12",
+      "id": 31
+    },
+    {
+      "exerciseId": "10",
+      "wrkId": 7,
+      "rep": "12",
+      "id": 32
+    },
+    {
+      "exerciseId": "12",
+      "wrkId": 7,
+      "rep": "10",
+      "id": 33
+    },
+    {
+      "exerciseId": "12",
+      "wrkId": 7,
+      "rep": "10",
+      "id": 34
+    },
+    {
+      "exerciseId": "12",
+      "wrkId": 7,
+      "rep": "10",
+      "id": 35
+    },
+    {
+      "exerciseId": "14",
+      "wrkId": 7,
+      "rep": "12",
+      "id": 36
+    },
+    {
+      "exerciseId": "14",
+      "wrkId": 7,
+      "rep": "12",
+      "id": 37
+    },
+    {
+      "exerciseId": "14",
+      "wrkId": 7,
+      "rep": "12",
+      "id": 38
+    },
+    {
+      "exerciseId": "4",
+      "wrkId": 7,
+      "rep": "6",
+      "id": 39
+    },
+    {
+      "exerciseId": "4",
+      "wrkId": 7,
+      "rep": "6",
+      "id": 40
+    },
+    {
+      "exerciseId": "24",
+      "wrkId": 7,
+      "rep": "8",
+      "id": 41
+    },
+    {
+      "exerciseId": "24",
+      "wrkId": 7,
+      "rep": "8",
+      "id": 42
+    },
+    {
+      "exerciseId": "13",
+      "wrkId": 7,
+      "rep": "20",
+      "id": 43
+    },
+    {
+      "exerciseId": "13",
+      "wrkId": 7,
+      "rep": "20",
+      "id": 44
+    },
+    {
+      "exerciseId": "3",
+      "wrkId": 8,
+      "rep": "4",
+      "id": 47
+    },
+    {
+      "exerciseId": "5",
+      "wrkId": 8,
+      "rep": "10",
+      "id": 48
+    },
+    {
+      "exerciseId": "5",
+      "wrkId": 8,
+      "rep": "8",
+      "id": 49
+    },
+    {
+      "exerciseId": "5",
+      "wrkId": 8,
+      "rep": "8",
+      "id": 50
+    },
+    {
+      "exerciseId": "16",
+      "wrkId": 8,
+      "rep": "6",
+      "id": 51
+    },
+    {
+      "exerciseId": "16",
+      "wrkId": 8,
+      "rep": "6",
+      "id": 52
+    },
+    {
+      "exerciseId": "28",
+      "wrkId": 8,
+      "rep": "8",
+      "id": 53
+    },
+    {
+      "exerciseId": "2",
+      "wrkId": 8,
+      "rep": "4",
+      "id": 54
+    },
+    {
+      "exerciseId": "17",
+      "wrkId": 8,
+      "rep": "15",
+      "id": 55
+    },
+    {
+      "exerciseId": "17",
+      "wrkId": 8,
+      "rep": "15",
+      "id": 56
+    },
+    {
+      "exerciseId": "7",
+      "wrkId": 8,
+      "rep": "12",
+      "id": 57
+    },
+    {
+      "exerciseId": "7",
+      "wrkId": 8,
+      "rep": "12",
+      "id": 58
     }
   ],
   "userProgramCross": [

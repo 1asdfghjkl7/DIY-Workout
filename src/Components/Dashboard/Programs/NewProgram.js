@@ -5,7 +5,7 @@ import "./NewProgram.css";
 export default class NewProgram extends Component {
     render() {
         const labelStyle = {
-            margin: "0 0 0 20vw"
+            margin: "0 0 0 0"
         };
         return (
             <React.Fragment>
@@ -15,7 +15,6 @@ export default class NewProgram extends Component {
                             document.getElementById("name").value,
                             localStorage.getItem("boi")
                         );
-                        // API.POSTUserProgramCross(localStorage.getItem("boi"))
                     }}
                 >
                     <Label

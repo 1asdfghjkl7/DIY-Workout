@@ -7,28 +7,17 @@ export default class NavBar extends Component {
     render() {
         const dashboardMenuItem = {
             padding: "0 25vw 0 25vw",
-            "border-style": "none"
+            borderStyle: "none"
         };
         return (
             <Menu>
                 <Menu.Item>
-                    <Link
-                        to="/"
-                        // onClick={() => {
-                        //     window.location.reload();
-                        // }}
-                    >
+                    <Link to="/">
                         <Button color="orange">Logout</Button>
                     </Link>
                 </Menu.Item>
                 <Menu.Item>
-                    <Link
-                        style={dashboardMenuItem}
-                        to="/Dashboard"
-                        // onClick={() => {
-                        //     window.location.reload();
-                        // }}
-                    >
+                    <Link style={dashboardMenuItem} to="/Dashboard">
                         <Button color="orange">Dashboard</Button>
                     </Link>
                 </Menu.Item>

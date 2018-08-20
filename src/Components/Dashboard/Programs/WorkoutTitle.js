@@ -37,7 +37,6 @@ export default class WorkoutTitle extends Component {
 
     deleteWorkout = () => {
         API.DELETEWorkout(this.props.workout.id);
-        // console.log(this.props.workout.id);
         window.location.reload();
     };
 
@@ -50,11 +49,7 @@ export default class WorkoutTitle extends Component {
         const buttonStyle = {
             width: "50vw"
         };
-        if (
-            workoutId == idOfProgram
-            // this.props.url ===
-            // `/Dashboard/Programs/SavedPrograms/${this.props.program.id}`
-        ) {
+        if (workoutId == idOfProgram) {
             return (
                 <React.Fragment>
                     <div>
@@ -102,12 +97,6 @@ export default class WorkoutTitle extends Component {
                         ) : null}
                     </div>
                     {this.state.isDetails ? (
-                        // <ExerciseForm
-                        //     handleExerciseOpen={this.handleExerciseOpen}
-                        //     handleExerciseClose={this.handleExerciseClose}
-                        //     exerciseModalOpen={this.state.exerciseModalOpen}
-                        //     workoutId={this.props.workout.id}
-                        // />
                         <Link
                             to={{
                                 pathname: "/AddExercise/",
