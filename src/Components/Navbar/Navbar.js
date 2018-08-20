@@ -1,59 +1,26 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Menu } from "semantic-ui-react";
+import { Menu, Button } from "semantic-ui-react";
+import "./Navbar.css";
 
 export default class NavBar extends Component {
     render() {
+        const dashboardMenuItem = {
+            padding: "0 25vw 0 25vw",
+            borderStyle: "none"
+        };
         return (
             <Menu>
-                <Link
-                    to="/"
-                    // onClick={() => {
-                    //     window.location.reload();
-                    // }}
-                >
-                    <Menu.Item name="Logout" />
-                </Link>
-                <Link
-                    to="/Dashboard"
-                    // onClick={() => {
-                    //     window.location.reload();
-                    // }}
-                >
-                    <Menu.Item name="Dashboard" />
-                </Link>
-                <Link
-                    to="/Dashboard/Programs"
-                    // onClick={() => {
-                    //     window.location.reload();
-                    // }}
-                >
-                    <Menu.Item name="Programs" />
-                </Link>
-                <Link
-                    to="/Dashboard/Programs/SavedPrograms"
-                    // onClick={() => {
-                    //     window.location.reload();
-                    // }}
-                >
-                    <Menu.Item name="Saved Programs" />
-                </Link>
-                <Link
-                    to="/Dashboard/Programs/NewProgram"
-                    // onClick={() => {
-                    //     window.location.reload();
-                    // }}
-                >
-                    <Menu.Item name="New Program" />
-                </Link>
-                <Link
-                    to="/Dashboard/Tutorials"
-                    // onClick={() => {
-                    //     window.location.reload();
-                    // }}
-                >
-                    <Menu.Item name="Tutorials" />
-                </Link>
+                <Menu.Item>
+                    <Link to="/">
+                        <Button color="orange">Logout</Button>
+                    </Link>
+                </Menu.Item>
+                <Menu.Item>
+                    <Link style={dashboardMenuItem} to="/Dashboard">
+                        <Button color="orange">Dashboard</Button>
+                    </Link>
+                </Menu.Item>
             </Menu>
         );
     }

@@ -1,0 +1,6 @@
+div > h1 {
+    text-align: center;
+}
+div > div > div > div > form > div > input#name {
+    margin: 0;
+}

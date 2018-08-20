@@ -3,10 +3,16 @@ import { Button, Form, Modal } from "semantic-ui-react";
 
 export default class WorkoutForm extends Component {
     render() {
+        const workoutInputStyle = {
+            margin: "0"
+        };
         return (
             <Modal
+                size="mini"
                 trigger={
-                    <Button onClick={this.props.handleOpen}>Add Workout</Button>
+                    <Button color="orange" onClick={this.props.handleOpen}>
+                        Add Workout
+                    </Button>
                 }
                 open={this.props.modalOpen}
                 onClose={this.props.handleClose}
@@ -17,7 +23,12 @@ export default class WorkoutForm extends Component {
                         <Form>
                             <Form.Field>
                                 <label htmlFor="name">Workout Name</label>
-                                <input type="text" name="name" id="name" />
+                                <input
+                                    style={workoutInputStyle}
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                />
                             </Form.Field>
                             <Button onClick={this.props.postWorkout}>
                                 Save Workout

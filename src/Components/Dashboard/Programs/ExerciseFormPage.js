@@ -21,10 +21,6 @@ export default class ExerciseFormPage extends Component {
     }
 
     submitExercise = event => {
-        // console.log(event.target.id);
-        // console.log(this.props.workoutId);
-        // console.log(this.props.reps);
-
         API.POSTModifiedExercise(
             event.target.id,
             this.props.workoutId,

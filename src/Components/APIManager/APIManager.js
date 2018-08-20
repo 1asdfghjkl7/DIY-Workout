@@ -49,10 +49,6 @@ class APIManager {
 
     //useExerciseWorkoutCross not ModifiedExercise. nested json doesnt work.
     POSTModifiedExercise(exId, wrkId, rep) {
-        // fetch("http://localhost:5002/exerciseWorkoutCross/")
-        // if (Response.length === 0) {
-
-        // }
         return fetch("http://localhost:5002/exerciseWorkoutCross/", {
             method: "POST",
             headers: {

@@ -23,11 +23,9 @@ export default class Home extends Component {
                                 style={{ cursor: "pointer" }}
                                 onClick={this.logout}
                             >
-                                Log Out
-                            </a>.
+                                Log Out.
+                            </a>
                         </h5>
-
-                        {/* <React.Fragment /> */}
                     </div>
                 )}
                 {!isAuthenticated() && (

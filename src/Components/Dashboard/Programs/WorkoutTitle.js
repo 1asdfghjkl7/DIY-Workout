@@ -37,7 +37,6 @@ export default class WorkoutTitle extends Component {
 
     deleteWorkout = () => {
         API.DELETEWorkout(this.props.workout.id);
-        // console.log(this.props.workout.id);
         window.location.reload();
     };
 
@@ -47,11 +46,10 @@ export default class WorkoutTitle extends Component {
     render() {
         const workoutId = this.props.workout.programId;
         const idOfProgram = parseInt(this.props.idOfProgram, 8);
-        if (
-            workoutId == idOfProgram
-            // this.props.url ===
-            // `/Dashboard/Programs/SavedPrograms/${this.props.program.id}`
-        ) {
+        const buttonStyle = {
+            width: "50vw"
+        };
+        if (workoutId == idOfProgram) {
             return (
                 <React.Fragment>
                     <div>
@@ -60,18 +58,22 @@ export default class WorkoutTitle extends Component {
                                 <h3 onClick={this.handleDetails}>
                                     {this.state.input}
                                 </h3>
-                                <Button
-                                    onClick={this.changeToggle}
-                                    color="yellow"
-                                >
-                                    Edit
-                                </Button>
-                                <Button
-                                    onClick={this.deleteWorkout}
-                                    color="red"
-                                >
-                                    Delete
-                                </Button>
+                                <Button.Group>
+                                    <Button
+                                        style={buttonStyle}
+                                        onClick={this.changeToggle}
+                                        color="blue"
+                                    >
+                                        Edit
+                                    </Button>
+                                    <Button
+                                        style={buttonStyle}
+                                        onClick={this.deleteWorkout}
+                                        color="red"
+                                    >
+                                        Delete
+                                    </Button>
+                                </Button.Group>
                             </div>
                         ) : (
                             <div>
@@ -95,19 +97,13 @@ export default class WorkoutTitle extends Component {
                         ) : null}
                     </div>
                     {this.state.isDetails ? (
-                        // <ExerciseForm
-                        //     handleExerciseOpen={this.handleExerciseOpen}
-                        //     handleExerciseClose={this.handleExerciseClose}
-                        //     exerciseModalOpen={this.state.exerciseModalOpen}
-                        //     workoutId={this.props.workout.id}
-                        // />
                         <Link
                             to={{
                                 pathname: "/AddExercise/",
                                 state: this.props.workout.id
                             }}
                         >
-                            <Button>add exercise</Button>
+                            <Button color="orange">add exercise</Button>
                         </Link>
                     ) : null}
                 </React.Fragment>

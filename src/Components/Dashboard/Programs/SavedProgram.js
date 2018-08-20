@@ -21,14 +21,12 @@ export default class SavedProgram extends Component {
         let array = [...this.state.days];
         const value = event.target.id;
         const index = array.findIndex(day => day === value);
-        // console.log(value);
         if (index > -1) {
             array = [...array.slice(0, index), ...array.slice(index + 1)];
         } else {
             array.push(value);
         }
         this.setState({ days: array });
-        // console.log(array);
     };
 
     postWorkout = () => {
@@ -79,7 +77,7 @@ export default class SavedProgram extends Component {
                     {this.state.toggle ? (
                         <div>
                             <h1>{this.state.input}</h1>
-                            <Button onClick={this.changeToggle} color="yellow">
+                            <Button onClick={this.changeToggle} color="blue">
                                 Edit
                             </Button>
                         </div>
