@@ -1,5 +1,5 @@
 # DIY-Workout
-lorem ipsum stuff about diyworkout
+Workout system for trainers to make custom workouts for their clients, or for individuals to design their own programs to follow.
 
 ### In one terminal clone the repo and start it
 ```
