@@ -1,7 +1,7 @@
 # DIY-Workout
 Workout system for trainers to make custom workouts for their clients, or for individuals to design their own programs to follow.
 
-http://diyworkout.s3-website-us-west-2.amazonaws.com/
+<a href="http://diyworkout.s3-website-us-west-2.amazonaws.com/" target="_blank">DIY-Workout deployed site</a>
 
 ### In one terminal clone the repo and start it
 ```
